@@ -17,3 +17,9 @@
 8. 點選github上Compare & pull request
 
 9. 複製連結貼至當周繳交的PR 
+
+作業改完並merge後：
+
+1. 切換至matser`git checkout master`
+2. 下載最新的資料下來`git pull origin master`
+3. 刪除hw1分之`git branch -d hw1`
