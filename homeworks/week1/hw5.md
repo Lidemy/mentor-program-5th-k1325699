@@ -1,9 +1,11 @@
 ## 請解釋後端與前端的差異。
 後端與前端的差異以餐廳做舉例的話，前端是櫃檯的人員，負責接收要求與把餐點(資料)給客人；後端則是餐廳，拿到菜單後做出餐點送回櫃台。
 簡單來說前端就是負責網站上看的到的東西，像是網頁畫面、網頁動畫與資料的傳入；而後端則是把資料進行儲存至一個資料庫內，從資料庫尋找要的資料進行輸出。
+前端主要使用的是Html、Css、Javascript
+後端主要使用的有PHP、MySQL
 
 ## 假設我今天去 Google 首頁搜尋框打上：JavaScript 並且按下 Enter，請說出從這一刻開始到我看到搜尋結果為止發生在背後的事情。
-網站 request google的伺服器，接著再database中尋找與`JavaScript`相關的資訊回傳至google server 再response 資料至網站上，就出現搜尋的結果。
+網站 request google的伺服器，接著再database中尋找與`JavaScript`相關的資訊回傳至google server 再response 資料至網站卡上，解析後傳到作業系統，再解析後再傳給網站，就出現搜尋的結果。
 
 
 ## 請列舉出 3 個「課程沒有提到」的 command line 指令並且說明功用
