@@ -1,8 +1,9 @@
 function join(arr, concatStr) {
   let ans=""
-  for(let i=0;i<arr.length;i++){
+  for(let i=0;i<arr.length-1;i++){
     ans+=arr[i]+concatStr
   }
+  ans+=arr[arr.length-1]
   return ans
 }
 

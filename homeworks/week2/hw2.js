@@ -1,6 +1,6 @@
 function capitalize(str) {
   let ans=""
-  if(str[0]>'a'&&str[0]<'z'){
+  if(str[0]>='a'&&str[0]<='z'){
     ans+=str[0].toUpperCase()
   }else{
     ans+=str[0]
@@ -12,3 +12,4 @@ function capitalize(str) {
 }
 
 console.log(capitalize('hello'));
+console.log(capitalize('aaaaa'));
