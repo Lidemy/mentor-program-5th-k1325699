@@ -1,5 +1,4 @@
 const request = require('request')
-const process = require('process')
 
 const action = process.argv[2]
 if (action === 'list') {
