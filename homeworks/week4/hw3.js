@@ -17,6 +17,7 @@ request(
         console.log('首都:', data[i].capital)
         console.log('貨幣:', data[i].currencies[0].code)
         console.log('國碼:', data[i].callingCodes[0])
+        console.log('------------')
       }
     }
   }

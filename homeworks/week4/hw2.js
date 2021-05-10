@@ -1,18 +1,24 @@
 const request = require('request')
 
 const action = process.argv[2]
-if (action === 'list') {
-  listBooks()
-} else if (action === 'read') {
-  readBook(process.argv[3])
-} else if (action === 'delete') {
-  deleteBook(process.argv[3])
-} else if (action === 'create') {
-  createBook(process.argv[3])
-} else if (action === 'updata') {
-  updataBook(process.argv[3], process.argv[4])
-} else {
-  console.log('錯誤')
+switch (action) {
+  case 'list':
+    listBooks()
+    break
+  case 'read':
+    readBook(process.argv[3])
+    break
+  case 'delete':
+    deleteBook(process.argv[3])
+    break
+  case 'create':
+    createBook(process.argv[3])
+    break
+  case 'update':
+    updataBook(process.argv[3], process.argv[4])
+    break
+  default:
+    console.log('錯誤')
 }
 
 function listBooks() {
@@ -52,6 +58,10 @@ function readBook(id) {
         console.log('err', err)
         return
       }
+      if (data.name === undefined) {
+        console.log('沒有此id')
+        return
+      }
       console.log(data.name)
     }
   )
@@ -65,12 +75,20 @@ function deleteBook(id) {
         console.log('err', err)
         return
       }
+      if (response.statusCode === 404) {
+        console.log('查無此id')
+        return
+      }
       console.log('刪除成功')
     }
   )
 }
 
 function createBook(name) {
+  if (process.argv[3] === undefined) {
+    console.log('請輸入書名')
+    return
+  }
   request.post(
     {
       url: 'https://lidemy-book-store.herokuapp.com/books/',
