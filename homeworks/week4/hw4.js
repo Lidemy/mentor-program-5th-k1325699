@@ -22,7 +22,7 @@ request(
     }
     const game = data.top
     for (let i = 0; i < game.length; i++) {
-      console.log(game[i].game._id, game[i].game.name)
+      console.log(game[i].viewers, game[i].game.name)
     }
   }
 )

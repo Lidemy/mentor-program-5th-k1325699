@@ -15,7 +15,7 @@ url:https://restaurant-platform.com
 |:--:|:--:|:--:|:--:|:--:|
 |回傳所有餐廳資料|GET|/restaurants|_limit:限制回傳資料數量|/restarants?_limut=5|
 |回傳單一餐廳資料|GET|/restaurants/:id|無|/restaurant/10|
-|刪除餐廳|DELETE|/restaurants/:id|name:餐廳名|無|
+|刪除餐廳|DELETE|/restaurants/:id|無|無|
 |新增餐廳|POST|/restaurants|name:餐廳名|無|
 |更改餐廳|PATCH|/restaurants/:id|name:餐廳名|無|
 
