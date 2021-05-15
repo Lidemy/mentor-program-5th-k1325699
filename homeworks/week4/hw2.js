@@ -75,7 +75,7 @@ function deleteBook(id) {
         console.log('err', err)
         return
       }
-      if (response.statusCode === 404) {
+      if (response.statusCode <= 200 && response.statusCode > 300) {
         console.log('查無此id')
         return
       }
