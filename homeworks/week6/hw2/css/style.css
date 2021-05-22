@@ -1,0 +1,140 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+*,*::before,*::after{
+	box-sizing:border-box;
+}
+body{
+  background: rgb(248, 185, 185,.3);
+}
+.wrap{
+  max-width: 645px;
+  margin: 0 auto;
+  border-top: solid 8px #fad312;
+  /* outline: solid yellow 1px; */
+  margin-top: 60px;
+  padding-left: 42px;
+  background: #fff;
+  box-shadow: 5px 5px 5px #fae78ac7;
+}
+.wrap h1{
+  font-size: 36px;
+  padding: 54px 0 35px 0;
+  font-weight: bold;
+}
+.info{
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+.info p{
+  padding-bottom: 22px;
+}
+.required{
+  color: #e74149;
+  padding-bottom: 6px;
+}
+.form p{
+  font-size: 20px;
+  padding-top: 49px;
+}
+.form p span{
+  color: #e74149;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.form__text__input{
+  display: block;
+  width: 287px;
+  height: 23px;
+  color: #afafaf;
+  outline: none;
+  margin-top: 19px;
+  border: solid 1px #d0d0d0;
+}
+.form .radio__options{
+  display: inline-block;
+  font-size: 14px;
+  padding-left: 9px;
+  margin-top: 24px;
+}
+.form .description{
+  font-size: 14px;
+  padding-top: 12px;
+}
+
+.submit{
+  font-size: 15px;
+  padding: 13px 31px;
+  background: #fad312;
+  border-radius: 3px;
+  margin-top: 55px;
+  margin-bottom:21px;
+  border: none;
+}
+.warning{
+  font-size: 14px;
+  padding-bottom: 35px;
+}
+footer{
+  text-align: center;
+  color:#999999;
+  font-size: 13px;
+  padding: 25px;
+  background: #000;
+  margin-top: 66px;
+}
