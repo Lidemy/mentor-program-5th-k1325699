@@ -13,5 +13,5 @@
 ## 請問 position: static, relative, absolute 跟 fixed 的差別是什麼？
 * position:static 預設值，不會被特別定位在頁面任何位置
 * position:relative 相對定位，以自己為自身的基準位置，自身原本的空間仍保留不會消失
-* position:absolute 絕對定位，以擁有相對定位的父層作為基準位置，自由指定配置位置，脫離元素原本的位置，後續元素自動遞補
+* position:absolute 絕對定位，以向上找第一個為relative非static的元素作為基準位置，自由指定配置位置，脫離元素原本的位置，後續元素自動遞補
 * position:fixed 與position:absolute相似，以整個視窗(body)為基準，就算拉動捲軸仍會維持在同個位置。
