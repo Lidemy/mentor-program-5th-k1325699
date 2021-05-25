@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新拖延運動報名表單</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>新拖延運動報名表單</h1>
+    <div class="info">
+      <p>活動日期：2020/12/10 ~ 2020/12/11</p>
+      <p>活動地點：台北市大安區新生南路二段1號</p>
+    </div>
+    <p class="required">*必填</p>
+    <form action="index.html" class="form">
+      <label for="name"><p>暱稱 <span>*</span></p></label>
+      <input type="text" name="name" id="name" placeholder="您的回答" class="form__text__input">
+      <label for="email"><p>電子郵件<span>*</span></p></label>
+      <input type="text" name="email" id="email" placeholder="您的電子郵件" class="form__text__input">
+      <label for="tele"><p>手機號碼 <span>*</span></p></label>
+      <input type="text" name="tele" id="tele" placeholder="您的手機號碼" class="form__text__input">
+      <p>報名類型 <span>*</span> </p>
+      <input type="radio" name="type" id="type1" value="躺在床上用想像力實作"><label for="type1" class="radio__options">躺在床上用想像力實作</label>
+      <br> 
+      <input type="radio" name="type" id="type2" value="趴在地上滑手機找現成的"><label for="type2" class="radio__options">趴在地上滑手機找現成的</label> 
+      <label for="know"><p>怎麼知道這個活動的？<span>*</span></p></label>
+      <input type="text" name="know" id="know" placeholder="您的回答" class="form__text__input">
+      <p>其他</p>
+      <label for="suggest"><p class="description">對活動的一些建議</p></label>
+      <input type="text" name="suggest" id="suggest" placeholder="您的回答" class="form__text__input">
+      <input type="submit" value="提交" class="submit">
+    </form>
+    <p class="warning">請勿透過表單送出您的密碼。</p>
+  </div>
+  <footer><p>© 2020 © Copyright. All rights Reserved.</p></footer>
+</body>
+</html>
