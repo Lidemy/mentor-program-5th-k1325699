@@ -97,11 +97,10 @@ select:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px white inset;
 }
 
-.form__text__input{
+.form__text__input,.form__text__input__needless{
   display: block;
   width: 287px;
   height: 23px;
-  color: #afafaf;
   outline: none;
   margin-top: 19px;
   border: solid 1px #d0d0d0;
@@ -148,4 +147,11 @@ footer{
   .required,.form,.warning{
     margin-left: 40px;
   }
+}
+
+/* js渲染 */
+.notice{
+  color: #e74149;
+  margin-top: 10px;
+  position: absolute;
 }
