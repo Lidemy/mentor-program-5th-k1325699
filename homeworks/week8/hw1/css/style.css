@@ -1,0 +1,250 @@
+/* css reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+*,*::before,*::after{
+	box-sizing:border-box;
+}
+
+.wrap{
+  max-width: 1960px;
+  margin: 0 auto;
+}
+/* header css */
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.header h1{
+  font-size: 36px;
+  color: #489846;
+  padding: 26px 0 32px 48px;
+}
+.header ul{
+  display: flex;
+  align-items: center;
+  margin-right: 48px;
+}
+.header li{
+  margin-left:10px
+}
+.header a{
+  text-decoration: none;
+  color:#010101;
+  padding: 14px 14px;
+  font-size: 18px;
+}
+.header .active,.header a:hover{
+  background: #ff7286;
+  color:#fefefe;
+  border-radius: 8px;
+}
+
+.banner{
+  height: 767px;
+  background-image:url(../img/games-bn.png);
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-content:center;
+}
+.banner .lottery{
+  display: block;
+  max-width: 500px;
+  height: 610px;
+  line-height: 1.5;
+  background: #fff;
+  border-radius: 16px;
+  margin-top:55px ;
+}
+.banner .lottery h2{
+  color: #5ec1b6;
+  font-size: 24px;
+  text-align: center;
+  padding: 44px 0 20px 0;
+}
+.banner .lottery >div{
+  display: flex;
+  padding:18px 20px 24px 20px;
+}
+.lottery__title{
+  font-size: 18px;
+  font-weight: bold;
+}
+.lottery__content{
+  font-size: 16px;
+  max-width: 319px;
+  padding-left: 20px;
+} 
+hr{
+  border: 1px dotted #cdcdcd;
+  max-width: 460px;
+}
+.lottery__btn{
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  background: #e62a45;
+  padding: 18px 160px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+.banner.first-prize{
+  background-image: url(../img/flight-4315953_1920.jpg);
+}
+.banner.second-prize{
+  background-image: url(../img/living-room-1872192_1920.jpg);
+}
+.banner.third-prize{
+  background-image: url(../img/youtube-2617510_1920.jpg);
+}
+.banner.none-prize{
+  background:#000;
+  color: #fff;
+}
+.banner .prize{
+  font-size: 36px;
+  text-align: center;
+}
+.banner > div > h2{
+  padding-top: 190px;
+  padding-bottom: 55px;
+}
+/* .banner h2{
+  padding-top: 190px;
+  padding-bottom: 55px;
+} */
+@media(max-width:768px){
+  .header{
+    display: block;
+  }
+  .header h1{
+    text-align: center;
+    padding: 26px 0 32px 0;
+  }
+  .header ul{
+    justify-content: space-between;
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
+  .header li{
+    margin-left:0;
+    width: 50%;
+  
+  }
+  .header a{
+    display: inline-block;
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+  }
+  .header .active,.header a:hover{
+    border-radius: 0px;
+  }
+  .banner h2{
+    font-size: 40px;
+  }
+}
+@media(max-width:420px){
+  .banner h2{
+    font-size: 32px;
+  }
+}
+
+/* footer CSS */
+.footer__news{
+  display: flex;
+  justify-content: space-between;
+  background: #e8efee;
+}
+.footer__information{
+  font-size: 14px;
+  line-height: 2em;
+  padding: 20px 0 20px 48px ;
+}
+.footer__title{
+  text-align: end;
+  color:#489846;
+  font-size: 36px;
+  padding: 35px 48px 9px 0;
+}
+.footer__media{
+  padding-right: 45px;
+}
+.footer__media a{
+  text-decoration: none;
+  color: #000;
+}
+.footer__statement{
+  font-size: 16px;
+  background: #35564b;
+  color:#fff;
+  text-align: center;
+  padding:15px 0;
+}
+@media(max-width:768px){
+  .footer__news{
+    margin-top: 43px;
+    display: flex;
+    background: #e8efee;
+    flex-direction:column-reverse;
+  }
+  .footer__title,.footer__media{
+    text-align: start;
+    padding: 0 0 9px 48px;
+  }
+  .footer__title{
+    padding-top: 36px;
+  }
+}
