@@ -29,6 +29,8 @@ document.querySelector('form').addEventListener('submit', (e) => {
     } else if (elements[i].querySelectorAll('input[type=radio]').length) {
       values[document.querySelector('input[name=type]').name] = typeValue
       if (typeValue === '') {
+        e.preventDefault()
+        isSuccess = false
         elements[i].appendChild(cloneNotice)
         cloneNotice = notice.cloneNode(true)
       }
