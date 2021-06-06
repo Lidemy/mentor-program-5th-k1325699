@@ -97,11 +97,12 @@ img{
   display: flex;
   justify-content: center;
   align-content:center;
+  align-items: flex-start;
 }
 .banner .lottery{
   display: block;
   max-width: 500px;
-  height: 610px;
+  /* height: 610px; */
   line-height: 1.5;
   background: #fff;
   border-radius: 16px;
@@ -113,32 +114,35 @@ img{
   text-align: center;
   padding: 44px 0 20px 0;
 }
-.banner .lottery >div{
+.banner .lottery .lottery__detail{
   display: flex;
+  align-items: flex-start;
   padding:18px 20px 24px 20px;
 }
 .lottery__title{
+  width: 90px;
   font-size: 18px;
   font-weight: bold;
 }
 .lottery__content{
+  flex: 1;
   font-size: 16px;
-  max-width: 319px;
-  padding-left: 20px;
+  /* max-width: 319px; */
+  margin-left: 20px;
 } 
 hr{
   border: 1px dotted #cdcdcd;
   max-width: 460px;
 }
 .lottery__btn{
-  display: inline-block;
+  display: block;
   font-size: 20px;
   color: #fff;
   background: #e62a45;
-  padding: 18px 160px;
-  /* margin-left: auto;
-  margin-right: auto; */
-  margin: 0 auto;
+  padding: 18px 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 .banner.first-prize{
   background-image: url(../img/flight-4315953_1920.jpg);
@@ -196,11 +200,7 @@ hr{
     font-size: 40px;
   }
 }
-@media(max-width:420px){
-  .banner h2{
-    font-size: 32px;
-  }
-}
+
 
 /* footer CSS */
 .footer__news{
@@ -235,7 +235,6 @@ hr{
 }
 @media(max-width:768px){
   .footer__news{
-    margin-top: 43px;
     display: flex;
     background: #e8efee;
     flex-direction:column-reverse;

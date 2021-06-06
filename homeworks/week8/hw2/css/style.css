@@ -103,7 +103,6 @@ img{
   width: 32%;
   margin-left: 10px;
   margin-bottom: 20px;
-  border: 1px solid springgreen;
 }
 .content a{
   text-decoration: none;
@@ -140,7 +139,4 @@ img{
   white-space: nowrap;
   font-size: 24px;
   padding-bottom: 10px;
-}
-.profiles .channel{
-  /* padding-bottom: 10px; */
 }
