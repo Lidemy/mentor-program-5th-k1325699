@@ -1,10 +1,10 @@
-const elements = document.querySelectorAll('.question li')
-for (let i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', (e) => {
-    remove(elements[i])
-    e.target.closest('li').lastChild.previousSibling.classList.toggle('open')
-  })
-}
+const element = document.querySelector('.question')
+element.addEventListener('click', (e) => {
+  if (e.target.closest('li')) {
+    remove(e.target)
+    e.target.closest('li').lastChild.previousSibling.classList.add('open')
+  }
+})
 
 function remove(element) {
   const Anster = element.closest('li').lastChild.previousSibling

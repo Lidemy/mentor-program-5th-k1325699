@@ -8,7 +8,7 @@ document.querySelector('.add__input').addEventListener('keydown', (e) => {
     <input type="checkbox" name="" id="" class="list__item__check">
     <span></span>
     </label>
-    ${escapeHtml(e.target.value)}
+    <p title="${escapeHtml(e.target.value)}">${escapeHtml(e.target.value)}</p>
     </div>
     <a href="#">X</a>
     `
@@ -26,14 +26,15 @@ function escapeHtml(unsafe) {
     .replace(/'/g, '&#039;')
 }
 document.querySelector('.app__content').addEventListener('click', (e) => {
-  e.preventDefault()
   //  刪除List
   if (e.target.tagName.toLowerCase() === 'a') {
+    e.preventDefault()
     e.target.parentElement.remove()
     return
   }
+
   //  完成變化
-  if (e.target.classList.contains('list__item__check')) {
+  if (e.target.parentElement.tagName.toLowerCase() === 'label' && e.target.tagName.toLowerCase() === 'span') {
     e.target.parentElement.parentElement.classList.toggle('finish')
   }
 })

@@ -61,8 +61,6 @@ img{
   padding: 20px;
   color: #189BA3;
   position: relative;
-  /* border: 1px solid #000;
-  outline:#000; */
   background: #FFFDE7;
   font-size: 30px;
 }
@@ -103,6 +101,16 @@ img{
   justify-content: space-between;
   padding: 20px 0;
 }
+.app .list__item{
+
+  display: flex;
+  overflow: hidden;
+}
+.app li p{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .list__item__check{
   display: none;
 }
@@ -138,6 +146,7 @@ img{
 .app li a{
   text-decoration: none;
   color: #189BA3;
+  width: 22px;
 }
 .app li .finish{
   text-decoration: line-through  1px #189ca36b;

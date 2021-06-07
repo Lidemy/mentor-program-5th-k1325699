@@ -64,6 +64,7 @@ img{
 .header{
   display: flex;
   justify-content: space-between;
+  box-shadow:4px 4px 4px #97a2a0;
 }
 .header h1{
   font-size: 36px;
