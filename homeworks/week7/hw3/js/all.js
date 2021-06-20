@@ -36,5 +36,6 @@ document.querySelector('.app__content').addEventListener('click', (e) => {
   //  完成變化
   if (e.target.parentElement.tagName.toLowerCase() === 'label' && e.target.tagName.toLowerCase() === 'span') {
     e.target.parentElement.parentElement.classList.toggle('finish')
+    console.log('成功')
   }
 })
