@@ -1,6 +1,5 @@
 const apiUrl = 'https://api.twitch.tv/kraken'
 const clientID = '7vxwhu3fnd6lqfy4fg452bnwpgnixa'
-
 // 串api
 // 前五名遊戲
 function getGame(callback) {
@@ -21,8 +20,11 @@ function getStream(gameName, callback) {
   const request = new XMLHttpRequest()
   request.onload = (e) => {
     if (request.status >= 200 && request.status < 400) {
-      const data = JSON.parse(request.responseText).streams
-      callback(data)
+      const { streams } = JSON.parse(request.responseText)
+      const data = JSON.parse(request.responseText)
+      console.log(data)
+      console.log(streams)
+      callback(streams)
     }
   }
   request.open('GET', `${apiUrl}/search/streams?query=${encodeURIComponent(gameName)}&limit=20`, true)
