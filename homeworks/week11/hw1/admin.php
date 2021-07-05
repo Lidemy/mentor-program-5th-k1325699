@@ -16,6 +16,18 @@
   }
   $item_for_page = 10;
   $offset = ($page - 1) * $item_for_page;
+  
+  if(!empty($_SESSION['username'])){
+    $stmt = $conn->prepare('SELECT * FROM k1325699_users WHERE username=?');
+    $stmt->bind_param('s',$_SESSION['username']);
+    $result = $stmt->execute();
+    if(!$result) {
+      die ($conn->error);
+    }
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+  }
+  include_once('check_permission.php');
 
   $stmt = $conn->prepare('SELECT * FROM k1325699_users ORDER BY  id ASC');
   $result = $stmt->execute();
