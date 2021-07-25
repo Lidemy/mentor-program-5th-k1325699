@@ -5,7 +5,7 @@ export function getComments(apiUrl, siteKey, before, cb) {
     url = `${url}&before=${before}`
   }
   $.ajax({ url })
-    .done((data) => {
+    .always((data) => {
       cb(data)
     })
 }
@@ -15,7 +15,7 @@ export function addComments(apiUrl, data, cb) {
     type: 'POST',
     url: `${apiUrl}api_add_comment.php`,
     data
-  }).done((data) => {
+  }).always((data) => {
     cb(data)
   })
 }

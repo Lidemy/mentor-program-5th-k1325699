@@ -83,6 +83,11 @@ img{
   background: rgba(161, 159, 159, 0.425);
   color: #fff;
 }
+@media(max-width:768px){
+  .header{
+    display: block;
+  }
+}
 .content{
   background: rgb(99, 237, 255,.5);;
   text-align: center;
@@ -107,6 +112,24 @@ img{
 .content a{
   text-decoration: none;
   color: #fff;
+}
+.content li>a>img{
+  width: 100%;
+  height: auto; 
+}
+@media(max-width:768px){
+  .content li{
+    width: 48%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media(max-width:550px){
+  .content li{
+    width: 98%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
 }
 .preview{
   height: 200px;

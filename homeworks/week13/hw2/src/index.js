@@ -1,7 +1,7 @@
 /* eslint-env jquery */
 /* eslint-disable import/prefer-default-export */
 import { getComments, addComments } from './api'
-import { appendCommentToDOM, appendStyle } from './utils'
+import { appendCommentToDOM, appendStyle, nowDate } from './utils'
 import { getForm, cssTemplate } from './templates'
 
 export function init(options) {
@@ -9,6 +9,7 @@ export function init(options) {
   let apiUrl = ''
   let containerElement = null
   let before = null
+  let isClicked = false
 
   siteKey = options.siteKey
   apiUrl = options.apiUrl
@@ -31,9 +32,16 @@ export function init(options) {
     const newComment = {
       site_key: siteKey,
       nickname: nicknameDOM.val(),
-      content: contentDOM.val()
+      content: contentDOM.val(),
+      created_at: nowDate()
     }
+    if (isClicked) return
+    isClicked = true
     addComments(apiUrl, newComment, (data) => {
+      if (!nicknameDOM.val() || !contentDOM.val()) {
+        alert('資料不齊全')
+        return
+      }
       if (!data.ok) {
         alert(data.message)
         return
@@ -41,6 +49,7 @@ export function init(options) {
       nicknameDOM.val('')
       contentDOM.val('')
       appendCommentToDOM($(commentsSelector), newComment, true)
+      isClicked = false
     })
   })
 
@@ -59,6 +68,8 @@ export function init(options) {
   // 查看更多
   $(loadMoreSelector).click((e) => {
     e.preventDefault()
+    if (isClicked) return
+    isClicked = true
     getComments(apiUrl, siteKey, before, (data) => {
       if (!data.ok) {
         alert(data.message)
@@ -72,6 +83,7 @@ export function init(options) {
       if (comments.length < 5) {
         $(loadMoreSelector).parent().prop('outerHTML', '<p class="h5 text-center data__bottom">~已到底部~</p>')
       }
+      isClicked = false
     })
   })
 }
