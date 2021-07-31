@@ -1,5 +1,7 @@
 const apiUrl = 'https://api.twitch.tv/kraken'
 const clientID = '7vxwhu3fnd6lqfy4fg452bnwpgnixa'
+
+let isClicked = false
 // 串api
 // 前五名遊戲
 async function getGame() {
@@ -74,6 +76,8 @@ function changeGame(gameName) {
   document.querySelector('.content h2').innerText = gameName
   document.querySelector('.content ul').innerText = ''
   async function runGetStream() {
+    if (isClicked) return
+    isClicked = true
     try {
       const json = await getStream(gameName)
       const { streams } = json
@@ -83,6 +87,7 @@ function changeGame(gameName) {
     } catch (err) {
       console.log('err', err)
     }
+    isClicked = false
   }
   runGetStream()
 }

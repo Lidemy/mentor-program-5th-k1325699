@@ -8,9 +8,12 @@ gulp為任務的管理，把所有任務自動化完成，但無法做到模組�
 而webpack則是模組的打包，把所有資源視作模組進行打包。
 
 ## CSS Selector 權重的計算方式為何？
-權重分為4項，由最低到最高分別為element,class,id,inline style attribute
+權重分為4項，由最低到最高分別為element(pseudo-elements),class(attributes selectors, pseudo-classes),id,inline style attribute
 element指的是像是p,a,ul,li等
+pseudo-elements指的是偽元素，像是::before,::after等
 class指的是.class
+attributes selectors指的像是.class[name=exercise]這種形式
+pseudo-classes指的像是:hover、:active等
 id指的是#id
 inline style attributey則指的是在html的tag中的style
 計算方式是從inline style attribute開始比較，如果inline style attribute比較多則權重比較高，一樣則向下比較直到element。

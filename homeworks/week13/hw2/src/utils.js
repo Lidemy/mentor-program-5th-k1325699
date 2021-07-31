@@ -29,3 +29,14 @@ export function appendStyle(cssTemplate) {
   styleElement.appendChild(document.createTextNode(cssTemplate))
   document.head.appendChild(styleElement)
 }
+
+export function nowDate() {
+  const time = new Date()
+  const year = time.getFullYear()
+  const month = time.getMonth() + 1
+  const day = time.getDate()
+  const hour = time.getHours()
+  const minute = time.getMinutes()
+  const second = time.getSeconds()
+  return `${year}-${month}-${day} ${hour}:${minute}:${second}`
+}
