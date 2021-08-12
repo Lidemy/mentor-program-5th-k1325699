@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/head') %> 
+</head>
+<body>
+  <div class="wrap">
+    <%- include('template/narbar') %> 
+    <div class="add__prize">
+      <div class="add__prize__title">
+        新增獎品：
+      </div>
+      <% if(errorMessage && errorMessage.length>0){ %> 
+        <h3><%= errorMessage %> </h3>
+      <% } %> 
+      <form action="/add_prize" method="post">
+        <div class="add__prize__input-wrapper">
+          獎品名稱: <input type="text" name="prizeName" id="">
+        </div>
+        <div class="add__prize__input-wrapper">獎品圖片路徑: <input type="text" name="imageURL" id=""></div>
+        <div class="add__prize__input-wrapper">獎品說明: <textarea name="caption" id="" cols="30" rows="10"></textarea></div>
+        <div class="add__prize__input-wrapper">機率:<input type="text" name="probability" id=""></div>
+        <div class="add__prize__btn-wrapper">
+          <input type="submit" value="新增" class="add__prize__btn">
+        </div>
+      </form>
+    </div>
+    <%- include('template/footer') %> 
+  </div>
+</body>
+</html>
