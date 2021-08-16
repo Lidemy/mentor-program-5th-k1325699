@@ -4,7 +4,7 @@ const session = require('express-session') // eslint-disable-line
 const flash = require('connect-flash') // eslint-disable-line
 
 const app = express()
-const port = 5001
+const port = 3001
 
 // middleware設定
 app.set('view engine', 'ejs')
