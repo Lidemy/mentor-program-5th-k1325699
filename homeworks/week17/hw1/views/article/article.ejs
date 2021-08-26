@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('../template/head') %> 
+</head>
+
+<body>
+  <%- include('../template/navbar') %> 
+  <section class="banner">
+    <div class="banner__wrapper">
+      <h1>存放技術之地</h1>
+      <div>Welcome to my blog</div>
+    </div>
+  </section>
+  <div class="container-wrapper">
+    <div class="posts">
+      <article class="post">
+        <div class="post__header">
+          <div class = "post__title"><%= articles.title %> </div>
+          <div class="post__actions">
+          <% if(username) { %>
+            <a class="admin-post__btn" href="/update_article/<%= articles.id %>">
+              編輯
+            </a>
+          <% } %>
+          </div>
+        </div>
+        <div class="post__info">
+          <%= articles.createdAt %>
+        </div>
+        <div class="post__content"><%= articles.content %> 
+        </div>
+      </article>
+    </div>
+  </div>
+  <footer>Copyright © 2020 Who's Blog All Rights Reserved.</footer>
+</body>
+</html>

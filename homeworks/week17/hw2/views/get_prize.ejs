@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/head') %> 
+  <style>
+  .prize__banner{
+    background-image:url('<%= prize.imageURL %>');
+  }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <%- include('template/narbar') %> 
+    <div class="prize__banner banner">
+      <div class='prize'>
+        <h2><%= prize.prizeName %></h2>
+        <div class="lottery__btn__wrap">
+          <a href="/" class="lottery__btn">我要抽獎</a>
+        </div>
+      </div>
+    </div>
+    <%- include('template/footer') %> 
+  </div>
+</body>
+</html>

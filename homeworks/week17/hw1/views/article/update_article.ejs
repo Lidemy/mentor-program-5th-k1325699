@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <%- include('../template/head') %> 
+</head>
+
+<body>
+  <%- include('../template/navbar') %> 
+  <section class="banner">
+    <div class="banner__wrapper">
+      <h1>存放技術之地</h1>
+      <div>Welcome to my blog</div>
+    </div>
+  </section>
+  <div class="container-wrapper">
+    <div class="container">
+      <div class="edit-post">
+        <form action="/update_article/<%= articles.id %> " method="POST">
+          <div class="edit-post__title">
+            發表文章：
+          </div>
+          <% if(errorMessage&&errorMessage.length>0){ %> 
+            <h3 class = "error"><%= errorMessage %></h3>
+          <% } %>
+          <div class="edit-post__input-wrapper">
+            <input class="edit-post__input" name="title" placeholder="請輸入文章標題" value="<%= articles.content %>"/>
+          </div>
+          <div class="edit-post__input-wrapper">
+            <textarea rows="20" class="edit-post__content" name = "content"><%= articles.content %></textarea>
+          </div>
+          <div class="edit-post__btn-wrapper">
+              <input type="submit" value="送出" class="edit-post__btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>Copyright © 2020 Who's Blog All Rights Reserved.</footer>
+</body>
+</html>

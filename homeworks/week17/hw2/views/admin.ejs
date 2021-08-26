@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('template/head') %> 
+</head>
+<body>
+  <div class="wrap">
+    <%- include('template/narbar') %> 
+    <div class="admin">
+      <table>
+        <tr>
+          <th class="admin__name">獎品名稱</th>
+          <th>獎品圖片路徑</th>
+          <th>獎品說明</th>
+          <th class="
+          admin__probability">機率</th>
+          <th class="admin__change">更改</th>
+        </tr>
+        <% prizes.forEach((prize)=>{ %> 
+        <tr>
+          <td><%= prize.prizeName %></td>
+          <td title="<%= prize.imageURL %>"><%= prize.imageURL %></td>
+          <td title="<%= prize.caption %>"><%= prize.caption %></td>
+          <td title="<%= prize.probability %>" class="
+          admin__probability"><%= prize.probability %>%</td>
+          <td class="admin__change">
+            <a href="update_prize/<%= prize.id %> ">編輯</a>
+            <a href="delete_prize/<%= prize.id %>">刪除</a>
+          </td>
+        </tr>
+        <% }) %>
+        <tr>
+          <% 
+            let num = 100
+            prizes.forEach((prize)=>{ 
+              num -=prize.probability
+            })
+          %> 
+          <td>銘謝惠顧</td>
+          <td title="https://upload.cc/i1/2021/08/08/X57Exh.jpg">https://upload.cc/i1/2021/08/08/X57Exh.jpg></td>
+          <td title="銘謝惠顧">銘謝惠顧</td>
+          <td class="
+          admin__probability"><%= num%>%</td>
+          <td class="admin__change">
+          </td>
+        </tr>
+      </table>
+    </div>
+    <%- include('template/footer') %> 
+  </div>
+</body>
+</html>
